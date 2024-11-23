@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+Prueba de Concepto - Integración de Sharetribe API en un E-Commerce Customizado
+Desarrollado por: Ymanol Martínez Castillo
+Descripción
+Esta es una prueba de concepto desarrollada para comprender y explorar el manejo de las APIs de Sharetribe dentro de un e-commerce customizado. El objetivo principal de este proyecto es integrar de manera efectiva las funcionalidades de Sharetribe en un sistema de administración de listados, usuarios y transacciones, todo dentro de una aplicación que se adapta tanto a dispositivos móviles como de escritorio.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Objetivo
+El propósito de esta prueba de concepto es servir como guía para futuras implementaciones de la API de Sharetribe, permitiendo comprender cómo interactuar con las APIs de Sharetribe Flex para obtener y mostrar datos como listados, usuarios y transacciones. Esta guía será útil para proyectos que necesiten integrar Sharetribe con otras soluciones e-commerce personalizadas.
 
-## Available Scripts
+Tecnologías Utilizadas
+React (Frontend)
+Axios (Para realizar las peticiones HTTP a la API de Sharetribe)
+Tailwind CSS (Para el diseño responsivo y moderno)
+React Router DOM (Para la navegación entre vistas)
+Sharetribe Flex API (Para la integración y consulta de datos)
+Instalación
+Clonar el Repositorio
+Para comenzar, clona este repositorio en tu máquina local:
 
-In the project directory, you can run:
+bash
+Copiar código
+git clone https://github.com/ymanoel/rentalo-admin-dashboard.git
+cd rentalo-admin-dashboard
+Instalar Dependencias
+Usa Yarn para instalar las dependencias del proyecto:
 
-### `yarn start`
+bash
+Copiar código
+yarn install
+Configuración del Proyecto
+Asegúrate de tener las siguientes variables de entorno configuradas en tu archivo .env:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copiar código
+REACT_APP_SHARETRIBE_CLIENT_ID=your_client_id
+REACT_APP_SHARETRIBE_CLIENT_SECRET=your_client_secret
+Características
+Dashboard
+Visualización de los listados disponibles.
+Visualización de los usuarios registrados en el sistema.
+Visualización de las transacciones realizadas.
+Responsividad
+La aplicación es totalmente responsiva, adaptándose a dispositivos móviles, tabletas y pantallas de escritorio.
+Top Bar y Sidebar se adaptan dinámicamente según el tamaño de la pantalla.
+Manejo de Datos
+Listados: Muestra una lista de todos los listados con detalles como título, estado y precio.
+Usuarios: Muestra una lista de los usuarios con nombre, correo electrónico y fecha de registro.
+Transacciones: Muestra las transacciones con detalles del comprador, vendedor y estado de la transacción.
+API de Sharetribe Flex
+La integración con la API de Sharetribe Flex permite obtener datos de listados, usuarios y transacciones. Las consultas se realizan mediante Axios utilizando un access token obtenido a través de la autenticación del cliente.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Puntos Finales Importantes:
+La autenticación con la API de Sharetribe se maneja mediante OAuth2 utilizando el Client ID y el Client Secret proporcionados por Sharetribe.
+Los datos de los listados, usuarios y transacciones se muestran en tablas, con soporte para filtros y manejo de errores adecuado.
+Futuras Implementaciones
+Aunque esta prueba de concepto se centra únicamente en la visualización de datos, el código puede servir como base para la implementación de funcionalidades adicionales, como la edición de listados, usuarios y transacciones.
 
-### `yarn test`
+Se pueden agregar funcionalidades adicionales como:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Filtrar y ordenar los datos mostrados.
+Soporte de paginación para grandes cantidades de datos.
+Administración completa de usuarios (creación, edición, eliminación).
