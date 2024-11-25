@@ -2,19 +2,13 @@ import { User } from "../_types/User";
 import apiClient from "./apiService";
 
 export const getUsers = async (page = 1, perPage = 10): Promise<User[]> => {
-  const response = await apiClient.get("/users/query", {
+  const response = await apiClient.get("/users", {
     params: { page, per_page: perPage },
   });
 
-  const users = response.data.data;
+  const users = response.data;
 
-  console.log("Response from API:", users);
-  return users.map((item: any) => ({
-    id: item.id,
-    name: item.attributes.profile.displayName || "N/A",
-    email: item.attributes.email || "N/A",
-    registrationDate: item.attributes.createdAt || "N/A",
-  }));
+  return users;
 };
 
 export const getUsersByIds = async (userIds: string[]): Promise<User[]> => {

@@ -1,7 +1,7 @@
 import axios from "axios";
-import getAccessToken from "./getAccessToken";
 
-const API_BASE_URL = "https://flex-api.sharetribe.com/v1/integration_api";
+const API_BASE_URL =
+  "https://sharetribe-custom-backend-production.up.railway.app/api";
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
@@ -10,16 +10,17 @@ const apiClient = axios.create({
   },
 });
 
+// TODO: Remover interceptor ya que el back hace el proceso del auth
 // Interceptor para agregar el token dinámicamente
-apiClient.interceptors.request.use(async (config) => {
-  try {
-    const token = await getAccessToken();
-    config.headers.Authorization = `Bearer ${token}`;
-    return config;
-  } catch (error: any) {
-    console.error("Error al configurar la solicitud:", error.message);
-    throw error;
-  }
-});
+// apiClient.interceptors.request.use(async (config) => {
+//   try {
+//     const token = await getAccessToken();
+//     config.headers.Authorization = `Bearer ${token}`;
+//     return config;
+//   } catch (error: any) {
+//     console.error("Error al configurar la solicitud:", error.message);
+//     throw error;
+//   }
+// });
 
 export default apiClient;

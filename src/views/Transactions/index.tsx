@@ -38,12 +38,10 @@ const TransactionsPage = () => {
             {
               header: "Comprador",
               accessor: "buyer",
-              render: (buyer) => buyer.name,
             },
             {
               header: "Vendedor",
               accessor: "seller",
-              render: (seller) => seller.name,
             },
             { header: "Estado", accessor: "status" },
             {

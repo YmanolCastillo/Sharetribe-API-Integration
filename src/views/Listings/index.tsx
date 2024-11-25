@@ -39,8 +39,6 @@ const ListingsPage = () => {
             {
               header: "Precio",
               accessor: "price",
-              render: (price: any) =>
-                price ? `${price.amount} ${price.currency}` : "N/A",
             },
           ]}
         />
