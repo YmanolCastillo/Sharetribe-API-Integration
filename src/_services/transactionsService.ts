@@ -1,6 +1,5 @@
 import apiClient from "./apiService";
 import { Transaction } from "../_types/Transaction";
-import { getUsersByIds } from "./userService";
 
 export const getTransactions = async (
   page = 1,
